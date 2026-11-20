@@ -28,8 +28,10 @@
 
 ### 中文字体
 
-egui 默认字体不含 CJK 字形。启动时从 `C:\Windows\Fonts\msyh.ttc`（微软雅黑）
-读取并插入 egui 字体族首位。文件不存在时回退默认字体并在状态栏提示
+egui 默认字体不含 CJK 字形，且其字体后端 ab_glyph 不支持 .ttc 字体集合
+（msyh.ttc 不可用）。启动时按顺序尝试加载 `C:\Windows\Fonts` 下的单字体文件：
+`simhei.ttf`、`Deng.ttf`、`simkai.ttf`、`simfang.ttf`，取第一个存在的，
+插入 egui 字体族首位。全部不存在时回退默认字体并在状态栏提示
 "未找到中文字体，中文可能显示为方框"。
 
 ## 数据模型与存储
