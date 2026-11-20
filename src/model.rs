@@ -43,7 +43,9 @@ pub struct Entry {
     pub value: String,
     pub service: String,
     pub notes: String,
+    #[allow(dead_code)]
     pub created_at: String,
+    #[allow(dead_code)]
     pub updated_at: String,
 }
 

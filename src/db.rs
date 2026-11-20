@@ -23,6 +23,7 @@ impl Db {
         Self::init(Connection::open(path)?)
     }
 
+    #[cfg_attr(not(test), allow(dead_code))]
     pub fn open_in_memory() -> rusqlite::Result<Self> {
         Self::init(Connection::open_in_memory()?)
     }
