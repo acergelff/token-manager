@@ -5,3 +5,5 @@ edition = "2021"
 
 [dependencies]
 rusqlite = { version = "0.43", features = ["bundled"] }
+eframe = "0.37"
+egui_extras = "0.37"
